@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KingFilms</title>
+<link href="css/style.css" rel="stylesheet"/>
+<script defer="" src="js/script.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="bg-container">
+<div class="bg-left"></div>
+<div class="bg-right"></div>
+</div>
+<div class="overlay">
+<header>
+<h1><i class="fas fa-crown"></i> KingFilms</h1>
+</header>
+<nav>
+<a href="#"><i class="fas fa-home"></i> Início</a>
+<a href="#"><i class="fas fa-film"></i> Filmes</a>
+<a href="#"><i class="fas fa-tv"></i> Séries</a>
+<a href="#"><i class="fas fa-star"></i> Lançamentos</a>
+<a href="#"><i class="fas fa-th"></i> Gêneros</a>
+</nav>
+<div class="search">
+<form class="search-form" onsubmit="event.preventDefault(); searchMovies();">
+<input id="searchInput" placeholder="Buscar filmes ou séries..." type="text"/>
+<button type="submit"><i class="fas fa-search"></i></button>
+</form>
+</div>
+<div class="categories">
+<div class="category" onclick="filterCategory('Ação')">Ação</div>
+<div class="category" onclick="filterCategory('Comédia')">Comédia</div>
+<div class="category" onclick="filterCategory('Terror')">Terror</div>
+<div class="category" onclick="filterCategory('Animação')">Animação</div>
+<div class="category" onclick="filterCategory('Suspense')">Suspense</div>
+<div class="category" onclick="filterCategory('Romance')">Romance</div>
+<div class="category" onclick="filterCategory('Todos')">Todos</div>
+</div>
+<section class="movies" id="movies">
+<div class="movie" data-category="Ação" onclick="openPlayer('https://www.youtube.com/embed/dQw4w9WgXcQ')">
+<img alt="O Protetor" src="https://image.tmdb.org/t/p/w342/b1Y8SUb12gPHCSSSNlbX4nB3IKy.jpg"/>
+<div class="movie-title">O Protetor</div>
+</div>
+<div class="movie" data-category="Comédia" onclick="openPlayer('https://www.youtube.com/embed/dQw4w9WgXcQ')">
+<img alt="Cidade Perdida" src="https://image.tmdb.org/t/p/w342/neMZH82Stu91d3iqvLdNQfqPPyl.jpg"/>
+<div class="movie-title">Cidade Perdida</div>
+</div>
+<div class="movie" data-category="Terror" onclick="openPlayer('https://www.youtube.com/embed/dQw4w9WgXcQ')">
+<img alt="A Freira" src="https://image.tmdb.org/t/p/w342/hYZ4a0JvPETdfgJJ9ZzyFufq8KQ.jpg"/>
+<div class="movie-title">A Freira</div>
+</div>
+<div class="movie" data-category="Romance" onclick="openPlayer('https://www.youtube.com/embed/dQw4w9WgXcQ')">
+<img alt="Além da Eternidade" src="https://i.imgur.com/NcVD7XD.jpeg"/>
+<div class="movie-title">Além da Eternidade</div>
+</div>
+<div class="movie" data-category="Animação" onclick="openPlayer('https://www.youtube.com/embed/dQw4w9WgXcQ')">
+<img alt="Encanto" src="https://image.tmdb.org/t/p/w342/4j0PNHkMr5ax3IA8tjtxcmPU3QT.jpg"/>
+<div class="movie-title">Encanto</div>
+</div>
+<div class="movie" data-category="Ação" onclick="openPlayer('https://www.youtube.com/embed/dQw4w9WgXcQ')">
+<img alt="Zona de Risco" src="https://image.tmdb.org/t/p/w342/8Y43POKjjKDGI9MH89NW0NAzzp8.jpg"/>
+<div class="movie-title">Zona de Risco</div>
+</div>
+<div class="movie" data-category="Comédia" onclick="openPlayer('https://www.youtube.com/embed/dQw4w9WgXcQ')">
+<img alt="Conexão Explosiva" src="https://image.tmdb.org/t/p/w342/4W0FnjSGn4x0mKZlBRx8OjFxQUM.jpg"/>
+<div class="movie-title">Conexão Explosiva</div>
+</div>
+<div class="movie" data-category="Terror" onclick="openPlayer('https://www.youtube.com/embed/dQw4w9WgXcQ')">
+<img alt="Invocação do Mal" src="https://image.tmdb.org/t/p/w342/wHa6KOJAoNTFLFtp7wguUJKSnju.jpg"/>
+<div class="movie-title">Invocação do Mal</div>
+</div>
+<div class="movie" data-category="Suspense" onclick="openPlayer('https://www.youtube.com/embed/dQw4w9WgXcQ')">
+<img alt="Segredos Mortais" src="https://image.tmdb.org/t/p/w342/gPbM0MK8CP8A174rmUwGsADNYKD.jpg"/>
+<div class="movie-title">Segredos Mortais</div>
+</div>
+<div class="movie" data-category="Romance" onclick="openPlayer('https://www.youtube.com/embed/dQw4w9WgXcQ')">
+<img alt="Operação Sombria" src="https://i.imgur.com/k9n4N1B.jpeg"/>
+<div class="movie-title">Operação Sombria</div>
+</div>
+</section>
+<div class="player-modal" id="playerModal">
+<span class="close-btn" onclick="closePlayer()">×</span>
+<iframe allowfullscreen="" frameborder="0" id="videoPlayer" src=""></iframe>
+</div>
+<footer>
+      © 2025 KingFilms - Todos os direitos reservados.
+    </footer>
+</div>
+</body>
+</html>
